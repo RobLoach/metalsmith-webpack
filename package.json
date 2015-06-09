@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "enhanced-resolve": "^0.7.6",
+    "extend": "^2.0.1",
     "webpack": "^1.4.13"
   },
   "devDependencies": {

@@ -43,4 +43,21 @@ describe('metalsmith-webpack', function(){
             })
     })
 
+    it('should pack defaults', function(done){
+        Metalsmith('test/fixtures/defaults')
+            .use(webpack({
+                // The context omitted, as it's provided by the default.
+                entry: './js/index.js',
+                output: {
+                    path: '/js',
+                    filename: 'index.js'
+                }
+            }))
+            .build(function(err){
+                if (err) return done(err)
+                assertDir('test/fixtures/defaults/expected', 'test/fixtures/defaults/build')
+                return done(null)
+            })
+    })
+
 })
