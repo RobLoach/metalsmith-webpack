@@ -15,18 +15,16 @@
   "license": "MIT",
   "main": "./lib/",
   "scripts": {
-    "style": "./node_modules/.bin/crispy ./lib/ ./test/*.js",
-    "test": "npm run style && ./node_modules/.bin/mocha -r should --reporter spec"
+    "test": "mocha -r should --reporter spec"
   },
   "dependencies": {
-    "enhanced-resolve": "^0.7.6",
+    "memory-fs": "^0.2.0",
     "webpack": "^1.4.13"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
-    "crispy": "^2.0.0",
-    "metalsmith": "^1.0.1",
+    "metalsmith": "^2.1.0",
     "mocha": "^2.0.1",
-    "should": "^4.3.0"
+    "should": "^7.1.0"
   }
 }
